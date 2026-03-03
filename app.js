@@ -68,7 +68,7 @@ async function crearCalculo(evento) {
     const numerosArreglo = numerosTexto.split(',').map(num => Number(num.trim()));
 
     if (numerosArreglo.some(isNaN)) {
-        mostrarMensaje('Validación: Ingresa solo números separados por comas.', true);
+        mostrarMensaje('Por favor, ingresa solo números separados por comas.', true);
         return;
     }
 
