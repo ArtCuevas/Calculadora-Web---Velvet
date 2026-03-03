@@ -1,0 +1,119 @@
+:root {
+    --primario: #4f46e5;
+    --primario-hover: #4338ca;
+    --fondo: #f3f4f6;
+    --texto: #1f2937;
+    --borde: #d1d5db;
+    --exito: #10b981;
+    --error: #ef4444;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.panel-formulario, .panel-historial {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.grupo-input {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-principal {
+    background-color: var(--primario);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-principal:hover {
+    background-color: var(--primario-hover);
+}
+
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    background-color: var(--fondo);
+}
+
+
+.btn-editar, .btn-eliminar {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.btn-editar { background-color: var(--primario); }
+.btn-eliminar { background-color: var(--error); }
+
+
+#notificacion {
+    padding: 1rem;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.oculto { display: none; }
+.alerta-exito { background-color: var(--exito); }
+.alerta-error { background-color: var(--error); }

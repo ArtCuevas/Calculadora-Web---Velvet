@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora API REST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora Web </h1>
+    </header>
+
+    <main class="contenedor">
+        <div id="notificacion" class="oculto"></div>
+
+        <section class="panel-formulario">
+            <h2>Nuevo Cálculo</h2>
+            <form id="formulario-calculo">
+                <div class="grupo-input">
+                    <label for="operacion">Operación:</label>
+                    <select id="operacion" required>
+                        <option value="">Selecciona una operación:</option>
+                        <option value="sumar">Sumar</option>
+                        <option value="restar">Restar</option>
+                        <option value="multiplicar">Multiplicar</option>
+                        <option value="dividir">Dividir</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="numeros">Ingrese los números separados por coma:</label>
+                    <input type="text" id="numeros" placeholder="Ejemplo: 15, 20.5, 10" required>
+                </div>
+
+                <button type="submit" class="btn-principal">Calcular y Guardar</button>
+            </form>
+        </section>
+
+        <section class="panel-historial">
+            <h2>Historial de Operaciones</h2>
+            <div class="tabla-contenedor">
+                <table id="tabla-historial">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Operación</th>
+                            <th>Números</th>
+                            <th>Resultado</th>
+                            <th>Etiqueta</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
